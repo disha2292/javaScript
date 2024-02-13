@@ -51,6 +51,9 @@ let production = () => {
                             console.log(`${stocks.toppings[0]} as toppings`)
                             setTimeout(() => {
                                 console.log("serve Ice cream")
+                                setTimeout(() => {
+                                    console.log("is it done now?")
+                                }, 2000)
                             }, 2000)
                         }, 3000)
                     }, 2000)

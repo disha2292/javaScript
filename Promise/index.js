@@ -131,30 +131,30 @@ doSomething(function (result) {
 // Write a function that takes two numbers as input and returns a promise. The promise should resolve with the result of dividing the first number by the second number if the second number is not zero. If the second number is zero, the promise should reject with an error message.
 
 
-let a = 5;
-let b = 0;
+// let a = 5;
+// let b = 0;
 
-function zeroOrNot(a, b) {
+// function zeroOrNot(a, b) {
 
-    return new Promise((resolve, reject) => {
-        if (b !== 0) {
-            resolve(a / b);
-        } else {
-            reject("b is zero broo");
-        }
-    });
-};
+//     return new Promise((resolve, reject) => {
+//         if (b !== 0) {
+//             resolve(a / b);
+//         } else {
+//             reject("b is zero broo");
+//         }
+//     });
+// };
 
-zeroOrNot(a, b).then((result) => {
-        console.log(result);
-    })
-    .catch((error) => {
-        console.log(error);
-    })
+// zeroOrNot(a, b).then((result) => {
+//         console.log(result);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     })
 
 
 
-const myPromise = new Promise((resolve, reject) => {
+const myPromise = new Promise((hua, nahihua) => {
     // Perform asynchronous operation here
     // For this exercise, let's divide two numbers
     const a = 10;
@@ -162,9 +162,9 @@ const myPromise = new Promise((resolve, reject) => {
 
     // Check if b is not zero
     if (b !== 0) {
-        resolve(a / b); // Resolve with the result of division
+        hua(a / b); // Resolve with the result of division
     } else {
-        reject("Error: Division by zero"); // Reject with an error message
+        nahihua("Error: Division by zero"); // Reject with an error message
     }
 });
 
@@ -176,3 +176,9 @@ myPromise
     .catch((error) => {
         console.error(error); // Output: Error: Division by zero
     });
+
+
+
+// let promise = new Promise((resolve, reject) => {
+
+// })

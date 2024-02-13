@@ -31,12 +31,24 @@ stored in stack memory
 // let num = 46;
 // let newNum = num;
 
-// num = 11; ----> //11//46
-
+// // num = 11; ---->
+// //11//46
+// num = 11;
 // console.log(num);
 // console.log(newNum);
-//46
-//46
+// //46
+// //46
+
+
+// let intern1 = "disha";
+// let intern2 = "jay";
+
+
+// intern1 = "khushi";
+
+// console.log(intern1);
+// console.log(intern2);
+
 
 
 // let num = 46;
@@ -98,47 +110,47 @@ NaN ("Not a Number") is a special kind of number value that's typically encounte
 
 
 // String
-const firstName = 'disha';
+// const firstName = 'disha';
 
-console.log(firstName);
+// console.log(firstName);
 
-// Number
-const age = 30;
-const temp = 98.9;
+// // Number
+// const age = 30;
+// const temp = 98.9;
 
-// Boolean
-const hasKids = true;
+// // Boolean
+// const hasKids = true;
 
-// Null
-const aptNumber = null;
+// // Null
+// const aptNumber = null;
 
-// Undefined
-// let score;
-const score = undefined;
-console.log(score);
+// // Undefined
+// // let score;
+// const score = undefined;
+// console.log(score);
 
-// Symbol
-const id = Symbol('id');
-console.log(id);
+// // Symbol
+// const id = Symbol('id');
+// console.log(id);
 
 // BigInt
 // const n = 9007199254740991 n;
 
 // Reference Types
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
-const person = {
-    name: 'Brad',
-};
+// const person = {
+//     name: 'Brad',
+// };
 
-function sayHello() {
-    console.log('Hello');
-}
+// function sayHello() {
+//     console.log('Hello');
+// }
 
-const output = sayHello;
+// const output = sayHello;
 
-console.log(output, typeof output);
+// console.log(output, typeof output);
 
 // More info on why typeof null == object
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#typeof_null
