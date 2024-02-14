@@ -157,3 +157,37 @@ NaN ("Not a Number") is a special kind of number value that's typically encounte
 
 //  More info on the "function object" type
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// typeof undefined // "undefined"
+
+// typeof 0 // "number"
+
+// typeof 10n // "bigint"
+
+// typeof true // "boolean"
+
+// typeof "foo" // "string"
+
+// typeof Symbol("id") // "symbol"
+
+// typeof Math // "object"  (1)
+
+// typeof null // "object"  (2)
+
+// typeof alert // "function"  (3)
+
+// alert( Number("   123   ") ); // 123
+// alert( Number("123z") );      // NaN (error reading a number at "z")
+// alert( Number(true) );        // 1
+// alert( Number(false) );       // 0
+
+
+console.log(typeof(true/false));
+
+console.log(typeof(false/true));
+
+console.log(typeof(1/0));
+
+console.log(typeof NaN);
+
