@@ -16,6 +16,23 @@ A callback function is a function passed into another function as an argument, w
 
 // iWillPassCallbackFunction(iAmCallbackFunction);
 
+function iWillPassCallbackFunction(callback) {
+    return function() {
+        setTimeout(function() {
+            console.log("i am a timer");
+            callback(); // Call the callback function inside the setTimeout
+        }, 5000);
+    };
+}
+
+function iAmCallbackFunction() {
+    console.log("i am a callback function");
+}
+
+const wrappedCallback = iWillPassCallbackFunction(iAmCallbackFunction);
+wrappedCallback(); // Call the returned function
+
+
 // console.log("i have nothing to do with what's happening");
 
 // console.log("start");
@@ -138,35 +155,56 @@ A callback function is a function passed into another function as an argument, w
 
 // console.log("end");
 // Define the main function that takes two numbers (a and b) and a callback function
-function calculate(a, b, callback) {
-    // Perform the sum of a and b
-    const sum = a + b;
+// function calculate(a, b, callback) {
+//     // Perform the sum of a and b
+//     const sum = a + b;
 
-    // Perform the multiplication of a and b
-    const multiplication = a * b;
+//     // Perform the multiplication of a and b
+//     const multiplication = a * b;
 
-    // Call the callback function with the results multiplied by 2
-    callback(sum * 2, multiplication * 2);
+//     // Call the callback function with the results multiplied by 2
+//     callback(sum * 2, multiplication * 2);
+// }
+
+// // Define the callback function
+// function callbackFunction(sum, multiplication) {
+//     console.log( sum);
+//     console.log( multiplication);
+// }
+
+
+function sum(a,b){
+    return a+b;
 }
 
-// Define the callback function
-function callbackFunction(sum, multiplication) {
-    console.log("Sum multiplied by 2:", sum);
-    console.log("Multiplication multiplied by 2:", multiplication);
+function mul(a,b){
+    return a*b;
 }
+
+function calculator(a,b,callback){
+    let sumandmul= callback(a,b);
+
+    return sumandmul*2;
+}
+
+
+console.log(calculator(4,2,sum));
+
+
+
 
 // Call the main function with two numbers and the callback function
 
 
-function sum(a, b) {
+// function sum(a, b) {
 
-    console.log(a + b);
-}
+//     console.log(a + b);
+// }
 
-function calculate(a, b, callback) {
-    callback(a, b);
-}
-calculate(3, 4, sum);
+// function calculate(a, b, callback) {
+//     callback(a, b);
+// }
+// calculate(3, 4, sum);
 
 
 
