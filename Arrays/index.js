@@ -42,3 +42,8 @@ function sum(x, y, z) {
 const numbers = [1, 2, 3, 4, 5];
 
 console.log(sum(...numbers)); // Output: 6
+
+
+let fruits = ["apple", "mango", "banana"];
+
+console.log(fruits);
